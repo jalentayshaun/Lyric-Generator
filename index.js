@@ -7,6 +7,7 @@ const port = 3000;
 const API_URL = "https://api.lyrics.ovh/v1/";
 
 app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", async (req, res) => {
     try {
