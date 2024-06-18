@@ -1,0 +1,59 @@
+:root {
+    --blue: #10439F;
+    --primary-purple: #874CCC;
+    --secondary-purple: #C65BCF;
+    --pink: #F27BBD;
+}
+
+.satisfy-regular {
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.gradient-background {
+    background: linear-gradient(300deg, #10439F, #874CCC, #C65BCF);
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: var(--pink);
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: white;
+    margin-bottom: 20px;
+}

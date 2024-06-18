@@ -9,7 +9,11 @@ const API_URL = "https://api.lyrics.ovh/v1/";
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", async (req, res) => {
+app.get("/", (req, res) => {
+    res.render("index.ejs", { content: "Lets find a song!" })
+})
+
+app.get("/search-lyrics", async (req, res) => {
     try {
         const artistName = req.body.artist;
         const songName = req.body.song;
@@ -18,9 +22,9 @@ app.get("/", async (req, res) => {
             artistName + "/" + 
             songName
         );
-        res.render("index.ejs", { lyrics: JSON.stringify(result.data) });
+        res.render("index.ejs", { content: JSON.stringify(result.data) });
     } catch (error) {
-        res.render("index.ejs", { lyrics: JSON.stringify(error.response.data) });
+        res.render("index.ejs", { content: JSON.stringify(error.response.data) });
     }
 });
 

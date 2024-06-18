@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/main/styles.css">
     <title>Lyric Generator</title>
 </head>
-<body>
+<body class="gradient-background">
     <div>
         <h1>Lyric Generator</h1>
-        <h2> <%= genreStory %> </h2>
+        <!-- <h2> <= genreStory %> </h2> -->
+         <h2>Random Musical Fact</h2>
     </div>
     
-    <form method="get">
-        <input type="text" id="artistInput" name="artist">
-        <input type="text" id="songInput" name="song">
+    <form action="search-lyrics" method="GET">
+        <input type="text" id="artistInput" name="artist" placeholder="Artist">
+        <input type="text" id="songInput" name="song" placeholder="Song">
+        <button type="submit">GO!</button>
     </form>
-    <p> <%= lyrics %> </p>
+    <p> <%= content %> </p>
 </body>
 </html>
