@@ -18,9 +18,9 @@
     </div>
     <div class="lyric-div">
         <form action="search-lyrics" method="GET">
-            <input type="text" id="artistInput" name="artist" placeholder="Artist">
-            <input type="text" id="songInput" name="song" placeholder="Song">
-            <button type="submit">GO!</button>
+            <input type="text" id="artistInput" name="artist" placeholder="Artist" required>
+            <input type="text" id="songInput" name="song" placeholder="Song" required>
+            <input class="form-submit" type="submit" value="GO!">
         </form>
         <p>
             <%= content %>

@@ -89,7 +89,7 @@ input {
     height: 3rem;
 }
 
-button {
+.form-submit {
     color: white;
     font-family: "Satisfy", cursive;
     font-size: 1.5rem;
