@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/main/styles.css">
     <title>Lyric Generator</title>
 </head>
@@ -15,12 +16,15 @@
         <!-- <h2> <= genreStory %> </h2> -->
          <h2>Random Musical Fact</h2>
     </div>
-    
-    <form action="search-lyrics" method="GET">
-        <input type="text" id="artistInput" name="artist" placeholder="Artist">
-        <input type="text" id="songInput" name="song" placeholder="Song">
-        <button type="submit">GO!</button>
-    </form>
-    <p> <%= content %> </p>
+    <div>
+        <form action="search-lyrics" method="GET">
+            <input type="text" id="artistInput" name="artist" placeholder="Artist">
+            <input type="text" id="songInput" name="song" placeholder="Song">
+            <button type="submit">GO!</button>
+        </form>
+        <p>
+            <%= content %>
+        </p>
+    </div>
 </body>
 </html>
