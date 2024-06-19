@@ -17,10 +17,10 @@ app.get("/", (req, res) => {
     res.render("index.ejs", { content: "Lets find a song!" })
 })
 
-app.get("/search-lyrics", async (req, res) => {
+app.post("/search-lyrics", async (req, res) => {
     try {
         const artistName = req.body.artist;
-        console.log(req.body);
+        console.log(artistName);
 
         const songName = req.body.song;
         console.log(songName);
@@ -28,8 +28,8 @@ app.get("/search-lyrics", async (req, res) => {
         const result = await axios.get(
             API_URL + artistName + "/" + songName
         );
-        console.log(result.data);
-        res.render("index.ejs", { content: JSON.stringify(result.data) });
+        console.log(result.data.lyrics);
+        res.render("index.ejs", { content: result.data.lyrics });
     } catch (error) {
         res.render("index.ejs", { content: JSON.stringify(error.response.data) });
     }
