@@ -9,10 +9,6 @@ const API_URL = "https://api.lyrics.ovh/v1/";
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const config = {
-    // headers: { Content-Type: application/json }
-}
-
 app.get("/", (req, res) => {
     res.render("index.ejs", { content: "Lets find a song!" })
 })
