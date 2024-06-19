@@ -27,7 +27,7 @@ app.post("/search-lyrics", async (req, res) => {
             API_URL + artistName + "/" + songName
         );
         console.log(result.data.lyrics);
-        
+
         const genreStory = await axios.get(GENRENATOR_URL);
 
         res.render("index.ejs", { 
